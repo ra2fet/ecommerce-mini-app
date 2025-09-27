@@ -2,7 +2,21 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+
+
+First, run the development server (port 3001):
+
+```bash
+npm run json-server
+# or
+yarn  json-server
+# or
+pnpm  json-server
+# or
+bun  json-server
+```
+
+Second, run the frontend  (port 3000):
 
 ```bash
 npm run dev

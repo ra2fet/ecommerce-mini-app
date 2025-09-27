@@ -1,0 +1,312 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Wireless Bluetooth Headphones",
+      "description": "Premium wireless headphones with noise cancellation and superior sound quality. Perfect for music lovers and professionals who demand the best audio experience.",
+      "price": 149.99,
+      "originalPrice": 199.99,
+      "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&h=400&fit=crop"
+      ],
+      "category": "electronics",
+      "rating": 4.5,
+      "reviewCount": 234,
+      "stock": 45,
+      "brand": "SoundMaster",
+      "specifications": {
+        "Battery Life": "30 hours",
+        "Connectivity": "Bluetooth 5.0",
+        "Weight": "250g",
+        "Charging Time": "2 hours"
+      },
+      "isOnSale": true,
+      "salePercentage": 25,
+      "tags": [
+        "wireless",
+        "bluetooth",
+        "headphones",
+        "music",
+        "premium"
+      ],
+      "createdAt": "2024-01-15T10:00:00Z",
+      "updatedAt": "2024-01-20T15:30:00Z"
+    },
+    {
+      "id": "2",
+      "name": "Smart Fitness Watch",
+      "description": "Advanced fitness tracking watch with heart rate monitoring, GPS, and smartphone connectivity. Track your workouts and stay connected.",
+      "price": 299.99,
+      "originalPrice": 349.99,
+      "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=400&h=400&fit=crop"
+      ],
+      "category": "electronics",
+      "rating": 4.7,
+      "reviewCount": 567,
+      "stock": 23,
+      "brand": "FitTech",
+      "specifications": {
+        "Battery Life": "7 days",
+        "Water Resistance": "50m",
+        "Display": "1.4 inch AMOLED",
+        "Storage": "4GB"
+      },
+      "isOnSale": true,
+      "salePercentage": 14,
+      "tags": [
+        "smartwatch",
+        "fitness",
+        "gps",
+        "health",
+        "waterproof"
+      ],
+      "createdAt": "2024-01-10T08:00:00Z",
+      "updatedAt": "2024-01-18T12:00:00Z"
+    },
+    {
+      "id": "3",
+      "name": "Classic Denim Jacket",
+      "description": "Timeless denim jacket made from premium cotton. A versatile piece that pairs perfectly with any casual outfit.",
+      "price": 89.99,
+      "imageUrl": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1544966503-7cc5ac882d5c?w=400&h=400&fit=crop"
+      ],
+      "category": "clothing",
+      "rating": 4.3,
+      "reviewCount": 123,
+      "stock": 67,
+      "brand": "UrbanStyle",
+      "specifications": {
+        "Material": "100% Cotton",
+        "Fit": "Regular",
+        "Care": "Machine wash cold",
+        "Origin": "USA"
+      },
+      "isOnSale": false,
+      "tags": [
+        "denim",
+        "jacket",
+        "casual",
+        "cotton",
+        "classic"
+      ],
+      "createdAt": "2024-01-12T14:00:00Z",
+      "updatedAt": "2024-01-16T09:30:00Z"
+    },
+    {
+      "id": "4",
+      "name": "Modern Coffee Table",
+      "description": "Sleek and modern coffee table crafted from premium oak wood. Perfect centerpiece for contemporary living rooms.",
+      "price": 399.99,
+      "originalPrice": 499.99,
+      "imageUrl": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=400&fit=crop"
+      ],
+      "category": "home",
+      "rating": 4.8,
+      "reviewCount": 89,
+      "stock": 12,
+      "brand": "HomeDesign",
+      "specifications": {
+        "Material": "Oak Wood",
+        "Dimensions": "120cm x 60cm x 45cm",
+        "Weight": "25kg",
+        "Assembly": "Required"
+      },
+      "isOnSale": true,
+      "salePercentage": 20,
+      "tags": [
+        "furniture",
+        "coffee table",
+        "oak",
+        "modern",
+        "living room"
+      ],
+      "createdAt": "2024-01-08T11:00:00Z",
+      "updatedAt": "2024-01-22T16:45:00Z"
+    },
+    {
+      "id": "5",
+      "name": "Professional Running Shoes",
+      "description": "High-performance running shoes designed for serious athletes. Features advanced cushioning and breathable materials.",
+      "price": 129.99,
+      "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=400&fit=crop"
+      ],
+      "category": "sports",
+      "rating": 4.6,
+      "reviewCount": 345,
+      "stock": 78,
+      "brand": "SportsPro",
+      "specifications": {
+        "Upper Material": "Mesh",
+        "Sole": "Rubber",
+        "Drop": "10mm",
+        "Weight": "280g"
+      },
+      "isOnSale": false,
+      "tags": [
+        "running",
+        "shoes",
+        "sports",
+        "breathable",
+        "cushioning"
+      ],
+      "createdAt": "2024-01-05T09:00:00Z",
+      "updatedAt": "2024-01-19T13:20:00Z"
+    },
+    {
+      "id": "6",
+      "name": "The Art of Programming",
+      "description": "Comprehensive guide to modern programming techniques and best practices. Essential reading for developers of all levels.",
+      "price": 45.99,
+      "originalPrice": 59.99,
+      "imageUrl": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=400&fit=crop"
+      ],
+      "category": "books",
+      "rating": 4.9,
+      "reviewCount": 678,
+      "stock": 156,
+      "brand": "TechBooks",
+      "specifications": {
+        "Pages": "542",
+        "Language": "English",
+        "Publisher": "Tech Publications",
+        "Edition": "3rd Edition"
+      },
+      "isOnSale": true,
+      "salePercentage": 23,
+      "tags": [
+        "programming",
+        "book",
+        "technology",
+        "development",
+        "education"
+      ],
+      "createdAt": "2024-01-03T16:00:00Z",
+      "updatedAt": "2024-01-17T10:15:00Z"
+    },
+    {
+      "id": "8",
+      "name": "Gaming Mechanical Keyboard",
+      "description": "RGB mechanical keyboard designed for gaming enthusiasts. Features tactile switches and customizable lighting.",
+      "price": 159.99,
+      "originalPrice": 199.99,
+      "imageUrl": "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&h=400&fit=crop",
+      "images": [
+        "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400&h=400&fit=crop"
+      ],
+      "category": "electronics",
+      "rating": 4.7,
+      "reviewCount": 445,
+      "stock": 34,
+      "brand": "GameTech",
+      "specifications": {
+        "Switch Type": "Cherry MX Blue",
+        "Backlight": "RGB",
+        "Layout": "Full Size",
+        "Cable": "Braided USB-C"
+      },
+      "isOnSale": true,
+      "salePercentage": 20,
+      "tags": [
+        "gaming",
+        "keyboard",
+        "mechanical",
+        "rgb",
+        "tactile"
+      ],
+      "createdAt": "2024-01-09T07:45:00Z",
+      "updatedAt": "2024-01-23T11:30:00Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Electronics",
+      "slug": "electronics",
+      "description": "Latest technology and electronic devices",
+      "imageUrl": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=400&h=400&fit=crop",
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "name": "Clothing",
+      "slug": "clothing",
+      "description": "Fashion and apparel for all occasions",
+      "imageUrl": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=400&fit=crop",
+      "isActive": true
+    },
+    {
+      "id": "3",
+      "name": "Home & Garden",
+      "slug": "home",
+      "description": "Furniture and home improvement items",
+      "imageUrl": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop",
+      "isActive": true
+    },
+    {
+      "id": "4",
+      "name": "Sports",
+      "slug": "sports",
+      "description": "Sports equipment and athletic wear",
+      "imageUrl": "https://images.unsplash.com/photo-1571019613-0b66cdf7b21f?w=400&h=400&fit=crop",
+      "isActive": true
+    },
+    {
+      "id": "5",
+      "name": "Books",
+      "slug": "books",
+      "description": "Educational and entertainment books",
+      "imageUrl": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=400&fit=crop",
+      "isActive": true
+    },
+    {
+      "id": "6",
+      "name": "Beauty",
+      "slug": "beauty",
+      "description": "Skincare and cosmetic products",
+      "imageUrl": "https://images.unsplash.com/photo-1556228724-1ca8aeafdd19?w=400&h=400&fit=crop",
+      "isActive": true
+    }
+  ],
+  "cart": [],
+  "favorites": [
+    {
+      "id": "fav_1758994523809_7mu7w1tk0",
+      "productId": "6",
+      "userId": "1",
+      "createdAt": "2025-09-27T17:35:23.809Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "email": "rafat@test.com",
+      "firstName": "Rafat",
+      "lastName": "Test User",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+      "preferences": {
+        "language": "en",
+        "currency": "USD",
+        "notifications": true
+      }
+    }
+  ]
+}
