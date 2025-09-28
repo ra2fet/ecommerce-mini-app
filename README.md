@@ -47,6 +47,9 @@ yarn test
 # or
 bun test
 ```
+## Screenshot
+<img width="1916" height="896" alt="Screenshot 2025-09-28 at 11 15 14 AM" src="https://github.com/user-attachments/assets/b3482a38-153a-4269-abb0-19497da56932" />
+
 
 ## Architecture and Design Principles
 
