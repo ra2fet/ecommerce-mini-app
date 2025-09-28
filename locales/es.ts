@@ -1,4 +1,4 @@
- export default {
+export default {
   common: {
     loading: 'Cargando...',
     error: 'Error',
@@ -137,5 +137,11 @@
     removedFromFavorites: 'Eliminado de favoritos.',
     cartUpdated: 'Carrito actualizado exitosamente.',
     preferencesSaved: 'Preferencias guardadas exitosamente.',
+  },
+  homePage: {
+    welcome: 'Bienvenido a Nuestra Tienda',
+    exploreProducts: 'Explora nuestros productos',
+    noProductsFound: 'No se encontraron productos que coincidan con tus criterios.',
+    adjustSearch: 'Intenta ajustar tu búsqueda o filtros.',
   },
 };

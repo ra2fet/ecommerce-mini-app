@@ -4,6 +4,7 @@ import "./globals.css";
 import { ReduxProvider } from '../store/providers/ReduxProvider';
 import { QueryProvider } from '../store/providers/QueryProvider';
 import { CustomThemeProvider } from '../store/providers/ThemeProvider';
+import { I18nProvider } from '../store/providers/I18nProvider';
 import { Header } from '../components/modals';
 
 const geistSans = Geist({
@@ -34,11 +35,13 @@ export default function RootLayout({
         <CustomThemeProvider>
           <ReduxProvider>
             <QueryProvider>
-              <Header />
-              {children}
+              <I18nProvider>
+                <Header />
+                {children}
+              </I18nProvider>
             </QueryProvider>
           </ReduxProvider>
-        </CustomThemeProvider> 
+        </CustomThemeProvider>
       </body>
     </html>
   );

@@ -1,4 +1,4 @@
- export default {
+export default {
   common: {
     loading: 'Loading...',
     error: 'Error',
@@ -137,5 +137,11 @@
     removedFromFavorites: 'Removed from favorites.',
     cartUpdated: 'Cart updated successfully.',
     preferencesSaved: 'Preferences saved successfully.',
+  },
+  homePage: {
+    welcome: 'Welcome to Our Store',
+    exploreProducts: 'Explore our products',
+    noProductsFound: 'No products found matching your criteria.',
+    adjustSearch: 'Try adjusting your search or filters.',
   },
 };

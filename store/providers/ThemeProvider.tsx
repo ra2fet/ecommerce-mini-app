@@ -1,39 +1,67 @@
 'use client';
 
-import React from 'react';
+import React, { createContext, useMemo, useState, useContext, ReactNode } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+import { PaletteMode, CssBaseline } from '@mui/material';
 
 interface CustomThemeProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-  const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#4D01FFFF',
-    },
-    secondary: {
-      main: '#FF9800',
-    },
-  },
-  typography: {
-    fontFamily: ['Geist', 'sans-serif'].join(','),
-  },
-  shape: {
-    borderRadius: 8,
-  },
+interface ColorModeContextType {
+  toggleColorMode: () => void;
+  mode: PaletteMode;
+}
+
+export const ColorModeContext = createContext<ColorModeContextType>({
+  toggleColorMode: () => {},
+  mode: 'light',
 });
 
-/**
- * Custom Theme Provider wrapper component
- * Isolates MUI theme creation on the client side
- */
-export const CustomThemeProvider  = ({ children }:CustomThemeProviderProps) => {
+
+export const CustomThemeProvider = ({ children }: CustomThemeProviderProps) => {
+  const [mode, setMode] = useState<PaletteMode>('light');
+
+  const colorMode = useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode: PaletteMode) => (prevMode === 'light' ? 'dark' : 'light'));
+      },
+      mode,
+    }),
+    [mode],
+  );
+
+  const theme = useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+          primary: {
+            main: '#4D01FFFF',
+          },
+          secondary: {
+            main: '#FF9800',
+          },
+        },
+        typography: {
+          fontFamily: ['Geist', 'sans-serif'].join(','),
+        },
+        shape: {
+          borderRadius: 8,
+        },
+      }),
+    [mode],
+  );
+
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      {children}
-    </ThemeProvider>
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        {children}
+      </ThemeProvider>
+    </ColorModeContext.Provider>
   );
 };
+
+export const useColorMode = () => useContext(ColorModeContext);

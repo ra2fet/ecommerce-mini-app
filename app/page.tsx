@@ -18,8 +18,11 @@ import {
 import { ProductCard, FilterPanel } from '../components/molecules';
 import { SearchInput } from '../components/atoms';
 import { motion, AnimatePresence } from 'framer-motion';
+import ErrorBoundary from '../components/atoms/ErrorBoundary/ErrorBoundary';
+import LoadingSkeleton from '../components/atoms/LoadingSkeleton/LoadingSkeleton';
+import { useI18n } from '../store/providers/I18nProvider';
 
-  const containerVariants = {
+const containerVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
 };
@@ -38,6 +41,7 @@ const Home = () => {
   const products = useAppSelector(selectProducts);
   const isLoading = useAppSelector(selectProductsLoading);
   const error = useAppSelector(selectProductsError);
+  const { messages } = useI18n();
 
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState({
@@ -90,20 +94,12 @@ const Home = () => {
 
       const handleViewDetails = useCallback((productId: string) => {
     console.log(`Navigating to product details: ${productId}`);
-        }, []);
+  }, []);
 
-      if (isLoading) {
+  if (isLoading) {
     return (
-      <Container
-        maxWidth="lg"
-        sx={{
-          py: 4,
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}
-      >
-        <CircularProgress size={60} />
+      <Container maxWidth="lg" sx={{ py: 4 }}>
+        <LoadingSkeleton />
       </Container>
     );
   }
@@ -118,28 +114,23 @@ const Home = () => {
         }}
       >
         <Typography variant="h6" color="error.main">
-          {error || 'Failed to load products. Please try again later.'}
+          {error || messages.error.generic}
         </Typography>
       </Container>
     );
   }
 
   return (
-    <Container
-      maxWidth="lg"
-      sx={{
-        py: 6
-      }}
-    >
-      <AnimatePresence>
-        <motion.div variants={containerVariants} initial="hidden" animate="visible">
-        
-          <Box
-            sx={{
-              textAlign: 'center',
-              mb: 8
-            }}
-          >
+    <Container maxWidth="lg" sx={{ py: 6 }}>
+      <ErrorBoundary>
+        <AnimatePresence>
+          <motion.div variants={containerVariants} initial="hidden" animate="visible">
+            <Box
+              sx={{
+                textAlign: 'center',
+                mb: 8
+              }}
+            >
             <Typography
               variant="h2"
               component="h1"
@@ -151,7 +142,7 @@ const Home = () => {
                 mb: 2
               }}
             >
-              Welcome to Our Store
+              {messages.homePage.welcome}
             </Typography>
             <Typography
               variant="h6"
@@ -162,21 +153,21 @@ const Home = () => {
                 lineHeight: 1.6
               }}
             >
-              Explore our products
+              {messages.homePage.exploreProducts}
             </Typography>
-          </Box>
-
-          {/* My filter zone */}
-          <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} mb={4}>
-            <Box sx={{ flexShrink: 0, width: { xs: '100%', md: 250 } }}>
-              <FilterPanel
-                initialCategory="all"
-                initialMinPrice={0}
-                initialMaxPrice={1000}
-                categories={categories}
-                onFilterChange={handleFilterChange}
-              />
             </Box>
+
+            {/* My filter zone */}
+            <Stack direction={{ xs: 'column', md: 'row' }} spacing={3} mb={4}>
+              <Box sx={{ flexShrink: 0, width: { xs: '100%', md: 250 } }}>
+                <FilterPanel
+                  initialCategory="all"
+                  initialMinPrice={0}
+                  initialMaxPrice={1000}
+                  categories={categories}
+                  onFilterChange={handleFilterChange}
+                />
+              </Box>
             <Box sx={{ flexGrow: 1 }}>
               <SearchInput
                 value={searchTerm}
@@ -206,33 +197,32 @@ const Home = () => {
                 ))}
               </Grid>
             </Box>
-          </Stack>
+            </Stack>
 
-
-       
-          {!filteredProducts.length && (
-            <Box
-              sx={{
-                textAlign: 'center',
-                py: 10
-              }}
-            >
-              <Typography
-                variant="h6"
-                color="text.secondary"
+            {!filteredProducts.length && (
+              <Box
                 sx={{
-                  mb: 2
+                  textAlign: 'center',
+                  py: 10
                 }}
               >
-                No products found matching your criteria.
-              </Typography>
-              <Typography variant="body1" color="text.secondary">
-                Try adjusting your search or filters.
-              </Typography>
-            </Box>
-          )}
-        </motion.div>
-      </AnimatePresence>
+                <Typography
+                  variant="h6"
+                  color="text.secondary"
+                  sx={{
+                    mb: 2
+                  }}
+                >
+                  {messages.homePage.noProductsFound}
+                </Typography>
+                <Typography variant="body1" color="text.secondary">
+                  {messages.homePage.adjustSearch}
+                </Typography>
+              </Box>
+            )}
+          </motion.div>
+        </AnimatePresence>
+      </ErrorBoundary>
     </Container>
   );
 };

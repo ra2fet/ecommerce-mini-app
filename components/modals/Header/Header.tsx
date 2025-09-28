@@ -5,8 +5,11 @@ import { AppBar, Toolbar, Typography, Box } from '@mui/material';
 import { CartIcon } from '../../molecules';
 import { FavoritesButton } from '../../molecules';
 import { CartPopup, FavoritesPopup } from '..';
+import { DarkModeToggle, LanguageSwitcher } from '../../atoms';
+import { useI18n } from '../../../store/providers/I18nProvider';
 
 const Header  = () => {
+  const { messages } = useI18n();
   const [isFavoritesOpen, setIsFavoritesOpen] = useState(false);
 
   const handleOpenFavorites = () => {
@@ -21,9 +24,11 @@ const Header  = () => {
     <AppBar position="sticky" color="primary" sx={{ top: 0, zIndex: 1100 }}>
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          My E-commerce App
+          {messages.navigation.home}
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <LanguageSwitcher />
+          <DarkModeToggle />
           <CartIcon />
           <FavoritesButton onClick={handleOpenFavorites} />
         </Box>
