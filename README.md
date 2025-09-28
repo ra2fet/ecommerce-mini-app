@@ -103,3 +103,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 You can see the live project deployed on Vercel using this link: [https://ecommerce-mini-app-one.vercel.app/](https://ecommerce-mini-app-one.vercel.app/)
 
 
+**Note**:
+To run the production project from the link, you need to start the server first in order to fetch the data. Please run the commands from the first step to start it.
+
