@@ -202,15 +202,7 @@ const ProductCard = ({
             Add to Cart
           </Button>
           
-          {showQuickView && (
-            <IconButton
-              onClick={handleViewDetails}
-              size="small"
-              sx={{ ml: 1 }}
-            >
-              <Visibility />
-            </IconButton>
-          )}
+        
         </CardActions>
       </Card>
     </motion.div>
