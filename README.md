@@ -82,7 +82,7 @@ This project is built with a focus on scalability, maintainability, and adherenc
 ## Technology Choices
 
 *   **Framework**: Next.js (React) for server-side rendering, routing, and API routes.
-*   **State Management**: Redux  for predictable state management.
+*   **State Management**: Redux toolkit for state management.
 *   **Styling**: MUI.
 *   **Data Fetching**: React Query for efficient data fetching, caching, and synchronization.
 *   **Internationalization**: `i18next` for multi-language support.
